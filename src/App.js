@@ -59,7 +59,7 @@ const Modal = ({id, setIsLoading, modals, setModals, rTop, rLeft}) =>{
   return (
     <div className='modal-wrapper'>
       <div className='Modal' style={{top: rTop,left: rLeft}}>   
-        <img alt="DJ Kahlid!" src="djkahlid.png" style={{width: "300px"}}/>     
+        <img alt="DJ Kahled!" src="djkahled.png" style={{width: "300px"}}/>     
         <h1 className='ModalTitle'>Anotha one!</h1>
         <p>Click Create a Modal to make another modal!</p>
         <CloseButton id={id} setIsLoading={setIsLoading}  setModals={setModals} modals={modals} />
