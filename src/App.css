@@ -1,38 +1,97 @@
+
+
+
+:root{
+  --primary-dark: #302E4A;
+  --primary-light: #7F6BB0;
+  --text-primary: #A29EBC;
+  --secondary: #4BB0E4;
+  --tertiary: #E5677F;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--primary-dark);
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+.container{
+  position: relative;
+  top: 20rem;
+  background-color: var(--primary-light);
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+  color: var(--text-primary);
+}
+
+.main-title{
+  color: var(--primary-dark);
+}
+
+.Modal{
+  background-color: var(--tertiary);
+  color: var(--primary-dark);
+  position: relative;
+  width: 200px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ModalButton{
+  background-color: hsl(200, 74%, 59%);
+  padding: .5rem;
+  border-radius: 10px;
+  width: 5rem;
+  border: 2px solid hsla(200, 76%, 40%, 0.824);
+  color: white;
+  justify-self: center;
+  align-self: center;
+}
+
+.ModalButton:hover{
+  background-color: hsla(200, 76%, 40%, 0.824);
+  color: hsl(200, 74%, 59%);
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-wrapper{
+  background-color: rgba(0,0,0,.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.close-modal{
+  background-color: var(--primary-dark);
+  color: var(--tertiary);
+  border: none;
+  float:right;
+  border-radius: 0 5px 0 0;
+  font-size: 1.25rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-modal:hover{
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  cursor: pointer;
 }
