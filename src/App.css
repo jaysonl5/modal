@@ -13,7 +13,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: var(--primary-dark);
+  background-color: #EDF1F9;
   display: flex;
   justify-content: center;
   align-items:flex-start;
@@ -21,20 +21,12 @@ body{
 
 .container{
   position: relative;
-  top: 20rem;
-  background-color: var(--primary-light);
+  top: 5rem;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   justify-content: space-between;
   text-align: center;
-  box-shadow:
-  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-  100px 100px 80px rgba(0, 0, 0, 0.07);
-  color: var(--text-primary);
+  color: black;
 }
 
 .main-title{
@@ -42,31 +34,23 @@ body{
 }
 
 .Modal{
-  background-color: var(--tertiary);
-  color: var(--primary-dark);
+  background-color: whitesmoke;
+  color: black;
   position: relative;
-  width: 200px;
+  width: 25rem;
   border-radius: 10px;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042);
 }
 
-.ModalButton{
-  background-color: hsl(200, 74%, 59%);
-  padding: .5rem;
-  border-radius: 10px;
-  width: 5rem;
-  border: 2px solid hsla(200, 76%, 40%, 0.824);
-  color: white;
-  justify-self: center;
-  align-self: center;
-}
 
-.ModalButton:hover{
-  background-color: hsla(200, 76%, 40%, 0.824);
-  color: hsl(200, 74%, 59%);
-  cursor: pointer;
-}
 
 .App {
   text-align: center;
@@ -74,6 +58,7 @@ body{
 
 .modal-wrapper{
   background-color: rgba(0,0,0,.2);
+  backdrop-filter: blur(2px);
   position: fixed;
   top: 0;
   left: 0;
@@ -81,17 +66,79 @@ body{
   right: 0;
 }
 
-.close-modal{
-  background-color: var(--primary-dark);
-  color: var(--tertiary);
+.modal-button{
+  background-color: rgba(102, 34, 238, 0.94);
   border: none;
-  float:right;
-  border-radius: 0 5px 0 0;
-  font-size: 1.25rem;
+  padding: .5rem;
+  border-radius: 10px;
+  width: 10rem;
+  color: whitesmoke;
+  justify-self: center;
+  margin: .5rem 1rem .5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.modal-button:hover{
+  background-color: rgba(66, 23, 152, 0.94);
+  color: white;
+  cursor: pointer;
+}
+
+.close-modal{
+  background-color: #e3e3e3;
+  color: grey;
+  padding: .5rem;
+  border: none;
+  border-radius: 10px;
+  width: 10rem;
+  justify-self: center;
+  margin: .5rem 1rem .5rem 1rem;
+  font-size: 1.2rem;
 }
 
 .close-modal:hover{
-  background-color: var(--primary-light);
+  background-color: #aeaeae;
   color: var(--primary-dark);
   cursor: pointer;
 }
+
+.dataLoading{
+  position:fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  padding-top: 200px;
+  background-color: rgba(238, 238, 238, 0.851);
+  backdrop-filter: blur(8px);
+  z-index: 5000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-dark)
+}
+
+@keyframes spin {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+.spinner {
+  animation: spin 1.5s linear infinite;
+  border: 8px solid rgba(102, 34, 238, 0.94);
+  border-bottom-color: rgba(66, 23, 152, 0.94);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
+
