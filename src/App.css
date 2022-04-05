@@ -1,14 +1,4 @@
 
-
-
-:root{
-  --primary-dark: #302E4A;
-  --primary-light: #7F6BB0;
-  --text-primary: #A29EBC;
-  --secondary: #4BB0E4;
-  --tertiary: #E5677F;
-}
-
 body{
   margin: 0;
   padding: 0;
@@ -102,7 +92,7 @@ body{
   cursor: pointer;
 }
 
-.dataLoading{
+.data-loading{
   position:fixed;
   top: 0;
   left: 0;
@@ -117,7 +107,6 @@ body{
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-dark)
 }
 
 @keyframes spin {
@@ -136,7 +125,7 @@ body{
   height: 25px;
   border-radius: 50%;
   position: absolute;
-  top: 18%;
+  top: 15%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   will-change: transform;
